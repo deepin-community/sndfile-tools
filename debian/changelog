@@ -1,0 +1,98 @@
+sndfile-tools (1.5-1) unstable; urgency=medium
+
+  * New upstream version 1.5
+  * Fix hardening
+  * Add me as uploader
+  * Remove spelling patch, applied by upstream
+  * Remove privacy patch, obsolete now
+  * d/rules: Remove unnecessary ldflags
+  * d/watch: Remove trailing whitespace
+  * Add d/upstream/metadata
+
+ -- Dennis Braun <d_braun@kabelmail.de>  Tue, 09 Feb 2021 21:49:08 +0100
+
+sndfile-tools (1.04-1) unstable; urgency=medium
+
+  * New upstream version 1.04
+    * Drop patches applied upstream
+  * Patch to fix spelling
+  * Patch to fix privacy breach
+  * Breaks/Replaces/Provides samplerate-programs
+    * sndfile-tools now includes 'sndfile-resample'
+  * Demote dependency on "fonts-dejavu-core" to Recommends (LP: #1394231)
+  * Modernize packaging by switching to dh
+    * Dropped d/compat
+    * Bump debhelper compat to 13
+  * Added autopkgtest based on upstream's testsuite
+  * Update d/watch to new upstream page at github
+  * Add salsa-ci configuration
+  * Declare that building this package does not require 'root' powers.
+  * Add Vcs-* stanzas
+  * Convert d/copyright to DEP5
+    * Generate d/copyright_hints
+    * fix 'licensecheck' excludes
+  * Bump standards version to 4.5.1
+  * New maintainer: Debian Multimedia Maintainers
+    * Removed Erik de Castro Lopo: thanks for all the fish
+    * Added myself as Uploader
+
+ -- IOhannes m zmölnig (Debian/GNU) <umlaeute@debian.org>  Fri, 22 Jan 2021 09:09:08 +0100
+
+sndfile-tools (1.03-7.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+
+  [ Helmut Grohne ]
+  * Fix FTCBFS: Support DEB_BUILD_OPTIONS=nocheck (Closes: #852735).
+
+ -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Thu, 05 Oct 2017 23:26:45 +0200
+
+sndfile-tools (1.03-7) unstable; urgency=low
+
+  * debian/rules: Switch from autotools-dev to dh-autoreconf.
+
+ -- Erik de Castro Lopo <erikd@mega-nerd.com>  Thu, 30 Jan 2014 19:23:00 +1100
+
+sndfile-tools (1.03-6) unstable; urgency=low
+
+  * Ensure config.{sub,guess} up to date for new ports (Closes: #727971).
+
+ -- Erik de Castro Lopo <erikd@mega-nerd.com>  Wed, 22 Jan 2014 07:46:41 +1100
+
+sndfile-tools (1.03-5) unstable; urgency=low
+
+  * debian/control : Depend on fonts-dejavu-core instead of ttf-dejavu-core
+    (Closes: #736094).
+
+ -- Erik de Castro Lopo <erikd@mega-nerd.com>  Mon, 20 Jan 2014 06:58:21 +1100
+
+sndfile-tools (1.03-4) unstable; urgency=low
+
+  * Ensure config.{sub,guess} up to date for new ports (Closes: #727971).
+  * debian/control
+    - Standards version 3.9.5. No changes needed.
+    - Remove DM-Upload-Allowed.
+  * debian/rules: Add hardening flags.
+
+ -- Erik de Castro Lopo <erikd@mega-nerd.com>  Sun, 19 Jan 2014 21:36:43 +1100
+
+sndfile-tools (1.03-3) unstable; urgency=low
+
+  * debian/control
+    - Fix spelling of libcairo in description (Closes: 702947).
+
+ -- Erik de Castro Lopo <erikd@mega-nerd.com>  Thu, 14 Mar 2013 10:44:47 +1100
+
+sndfile-tools (1.03-2) unstable; urgency=low
+
+  * debian/copyright
+    - Make copyrights more explicit.
+    - Remove empty first paragraph of description (Closes: 563488).
+
+ -- Erik de Castro Lopo <erikd@mega-nerd.com>  Mon, 21 Dec 2009 11:43:11 +1100
+
+sndfile-tools (1.03-1) unstable; urgency=low
+
+  * Initial release (Closes: 559757).
+
+ -- Erik de Castro Lopo <erikd@mega-nerd.com>  Mon, 14 Dec 2009 19:42:42 +1100

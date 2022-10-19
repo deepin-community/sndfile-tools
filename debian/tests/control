@@ -1,0 +1,3 @@
+Tests: upstream-tests
+Depends: @, valgrind
+#Restrictions: allow-stderr

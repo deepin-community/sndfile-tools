@@ -1,0 +1,8 @@
+#!/bin/sh
+set -e
+
+# massage the test-wrapper to use the system-installed binaries
+sed -e 's| bin/\([^ ]*\) | $(which \1) |' -i tests/test-wrapper.sh
+
+# run the test-suite
+tests/test-wrapper.sh

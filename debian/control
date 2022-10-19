@@ -1,0 +1,36 @@
+Source: sndfile-tools
+Section: sound
+Priority: optional
+Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
+Uploaders:
+ IOhannes m zmölnig (Debian/GNU) <umlaeute@debian.org>,
+ Dennis Braun <d_braun@kabelmail.de>
+Build-Depends:
+ debhelper-compat (= 13),
+ autogen,
+ pkg-config,
+ libasound2-dev [linux-any],
+ libsndfile1-dev,
+ libsamplerate0-dev,
+ libjack-dev,
+ libfftw3-dev,
+ libcairo2-dev,
+Standards-Version: 4.5.1
+Rules-Requires-Root: no
+Homepage: http://www.mega-nerd.com/libsndfile/tools/
+Vcs-Git: https://salsa.debian.org/multimedia-team/sndfile-tools.git
+Vcs-Browser: https://salsa.debian.org/multimedia-team/sndfile-tools
+
+Package: sndfile-tools
+Architecture: any
+Depends:
+ ${shlibs:Depends}, ${misc:Depends},
+Recommends:
+ fonts-dejavu-core,
+Breaks: sndfile-programs (<< 1.0.21), samplerate-programs (<< 0.2.0)
+Replaces: samplerate-programs (<< 0.2.0)
+Provides: samplerate-programs
+Description: Collection of programs for operating on sound files
+ sndfile-tools is a collection of programs which use libsndfile and other
+ libraries to do useful things like generate spectrograms using libfftw and
+ libcairo and play sound via the JACK Audio Connection Kit daemon.
